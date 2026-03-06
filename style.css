@@ -65,3 +65,23 @@ input:required + span::after{
   left: 260px;
   bottom: 35px;
 }
+
+input + span::before{
+  position: absolute;
+  left: 346px;
+  bottom: 6px;
+}
+
+input:invalid{
+  border: 2px solid red;
+}
+
+input:invalid + span::before{
+  content: "✖";
+  color: red;
+}
+
+input:valid + span::before{
+  content: "✓";
+  color: green;
+}
